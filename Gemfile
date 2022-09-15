@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+gem 'carrierwave'
 
 source 'https://rubygems.org'
 

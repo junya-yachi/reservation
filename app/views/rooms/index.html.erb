@@ -1,0 +1,15 @@
+<h1>検索結果 : </h1>
+
+<div class="container">
+  <% @rooms.each do |room| %>
+    <div>
+    <%= room.image %>
+    <%= room.name %>
+    <%= room.adress %>
+    <%= room.rent %>
+    <%= link_to "詳細", room %>
+    </div>
+  <% end %>
+</div>
+
+<p><%= link_to "Topページへ", :mains %></p>
