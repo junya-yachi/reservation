@@ -6,6 +6,20 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 
+  def self.search(search)
+    if search
+      where(['adress LIKE ?', "%#{search}%"])
+    else
+      all
+    end
+  end
+
+  before_action :set_search
+  def set_search
+    @q = Room.ransack(params[:q])
+    @mains = @q.result(distinct: true)
+  end
+
   private
   def afeter_sign_in_path_for(resource)
     mains_index_path(resource)

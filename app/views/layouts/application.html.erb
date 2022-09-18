@@ -11,6 +11,26 @@
   </head>
 
   <body>
+    <header>
+      <div class="header_container">
+        <%= image_tag 'potelogo.png' %>
+
+        <%= form_tag(rooms_path, :method => "get") do %>
+          <%= search_field :adress_cont, placeholder: "エリア" %>
+        <% end %>
+
+        <%= form_tag(rooms_path, :method => "get") do %>
+          <%= text_field_tag :search, '', placeholder: "キーワード" %>
+        <% end %>
+        
+          <div class="log_in_btn">ログイン</div>
+          <div class="sign_up_btn">新規登録</div>
+      </div>
+
+    </header>
+
     <%= yield %>
+
+    <p><%= link_to "Topページへ", :mains %></p>
   </body>
 </html>

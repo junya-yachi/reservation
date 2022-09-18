@@ -8,7 +8,15 @@ devise_for :users, controllers: {
   sessions: 'users/sessions'
 }
 
+  resources :rooms do
+    collection do
+      get 'search'
+    end
+  end
+
   resources :mains
   resources :rooms
   resources :reserves
+
+  get 'search' => 'rooms#search'
 end

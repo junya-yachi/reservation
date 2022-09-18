@@ -31,6 +31,10 @@ gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
 gem 'carrierwave'
+gem 'ransack'
+gem 'mini_magick'
+gem 'pry-rails'
+gem 'rails-i18n'
 
 source 'https://rubygems.org'
 
