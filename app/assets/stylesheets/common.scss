@@ -5,15 +5,23 @@ body {
 }
 
 .header_container {
-  display: flex;
   background: #000;
   height: 70px;
   line-height: 42px;
   justify-content: space-between;
 }
 
+.header_left {
+  float: left;
+  display: flex;
+}
+
 form_tag {
   height: 16px;
+}
+
+.header_right {
+  float: right;
 }
 
 .log_in_btn {
@@ -22,7 +30,7 @@ form_tag {
   padding: 6px 12px;
   margin: 8px 16px;
   border-radius: 8px;
-
+  float: left;
 }
 
 .sign_up_btn {
@@ -31,4 +39,5 @@ form_tag {
   padding: 6px 12px;
   margin: 8px 16px;
   border-radius: 8px;
+  float: right;
 }

@@ -13,18 +13,62 @@
   <body>
     <header>
       <div class="header_container">
-        <%= image_tag 'potelogo.png' %>
+        <div class="header_left">
+          <%= image_tag 'potelogo.png' %>
 
-        <%= form_tag(rooms_path, :method => "get") do %>
-          <%= search_field :adress_cont, placeholder: "エリア" %>
-        <% end %>
+          <%= form_tag(rooms_path, :method => "get") do %>
+            <%= search_field :adress_cont, placeholder: "エリア" %>
+          <% end %>
 
-        <%= form_tag(rooms_path, :method => "get") do %>
-          <%= text_field_tag :search, '', placeholder: "キーワード" %>
+          <%= form_tag(rooms_path, :method => "get") do %>
+            <%= text_field_tag :search, '', placeholder: "キーワード" %>
+          <% end %>
+        </div>
+
+        <% if !logged_in? %>
+          <div class="header_right">
+            <%= link_to new_user_session_path do %>
+              <div class="log_in_btn">ログイン</div>
+            <% end %>
+            
+            <%= link_to new_user_session_path do %>
+              <div class="sign_up_btn">新規登録</div>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="header_right">
+
+            <span>メニュー</span>
+            <nav>
+              <ul class="menu">
+                <li>
+                  <%= link_to new_room_path do %>
+                  ルーム登録
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to reserves_path do %>
+                  予約済ルーム一覧
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to rooms_path do %>
+                  登録済ルーム一覧
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to edit_user_registration_path do %>
+                  編集
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                  ログアウト
+                  <% end %>
+                </li>
+              </ul>
+            </nav>
         <% end %>
-        
-          <div class="log_in_btn">ログイン</div>
-          <div class="sign_up_btn">新規登録</div>
       </div>
 
     </header>
