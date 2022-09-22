@@ -5,10 +5,28 @@
     <p>Potepan Shareでまだ体験したことのない旅をしよう</p>
     <%= form_tag(rooms_path, :method => "get") do %>
       <%= search_field :adress_cont, placeholder: "エリア" %>
+    <div class="hero_searh_btn">
       <%= submit_tag "探す", :adress => nil, class: "hero_btn" %>
+    </div>
     <% end %>
   </div>
 </section>
+
+<main>
+  <div>
+    <h1>オススメのエリア</h1>
+    
+    <div class="img_container">
+      <%= link_to image_tag("img_tokyo.jpg", class:"area_img"), :rooms %>
+      <%= link_to image_tag("img_osaka.jpg", class:"area_img"), :rooms %>
+      <%= link_to image_tag("img_kyoto.jpg", class:"area_img"), :rooms %>
+      <%= link_to image_tag("img_sapporo.jpg", class:"area_img"), :rooms %>
+    </div>
+  </div>
+
+
+
+</main>
 
 <%= link_to "編集画面", edit_user_registration_path %>
 <%= link_to "ルーム一覧", :rooms %>
