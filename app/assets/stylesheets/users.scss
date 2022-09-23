@@ -4,3 +4,32 @@
   border-radius: 100%;
   object-fit: cover;
 }
+
+.log_in_container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 36px 15px 0;
+}
+
+.log_in_frame {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.log_in_form {
+  display: flex;
+  justify-content: center;
+}
+
+.required_b::before {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 4px;
+  margin: 0 5px;
+}

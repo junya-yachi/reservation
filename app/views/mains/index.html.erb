@@ -12,15 +12,27 @@
   </div>
 </section>
 
-<main>
-  <div>
-    <h1>オススメのエリア</h1>
+<main class="main_container">
+  <div class="main_area">
+    <h1 class="main_title">オススメのエリア</h1>
     
     <div class="img_container">
-      <%= link_to image_tag("img_tokyo.jpg", class:"area_img"), :rooms %>
-      <%= link_to image_tag("img_osaka.jpg", class:"area_img"), :rooms %>
-      <%= link_to image_tag("img_kyoto.jpg", class:"area_img"), :rooms %>
-      <%= link_to image_tag("img_sapporo.jpg", class:"area_img"), :rooms %>
+      <div class="img_item">
+        <span class="area_name">東京</span>
+        <%= link_to image_tag("img_tokyo.jpg", class:"area_img"), :rooms %>
+      </div>
+      <div class="img_item">
+        <span class="area_name">大阪</span>
+        <%= link_to image_tag("img_osaka.jpg", class:"area_img"), :rooms %>
+      </div>
+      <div class="img_item">
+        <span class="area_name">京都</span>
+        <%= link_to image_tag("img_kyoto.jpg", class:"area_img"), :rooms %>
+      </div>
+      <div class="img_item">
+        <span class="area_name">札幌</span>
+        <%= link_to image_tag("img_sapporo.jpg", class:"area_img"), :rooms %>
+      </div>
     </div>
   </div>
 

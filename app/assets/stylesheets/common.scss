@@ -15,6 +15,11 @@ body {
   display: flex;
 }
 
+.header_left input {
+  margin-top: 10px;
+  height: auto;
+}
+
 .header_right {
   float: right;
 }
@@ -57,5 +62,22 @@ body {
 }
 
 .navbar-collapse {
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 50vh;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  height: 180px;
+  width: 100%;
+  margin-top: 64px;
+  padding-top: 90px;
+  background: #111;
+  color: #fff;
   text-align: center;
 }
