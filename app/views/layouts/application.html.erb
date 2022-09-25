@@ -15,7 +15,7 @@
     <header>
       <div class="header_container">
         <div class="header_left">
-          <%= image_tag 'potelogo.png' %>
+          <%= link_to image_tag("potelogo.png"), :mains %>
           <%= form_tag(rooms_path, :method => "get") do %>
             <%= search_field :adress_cont, placeholder: "エリア" %>
           <% end %>
@@ -36,46 +36,48 @@
           </div>
         <% else %>
           <div class="header_right">
-
-            <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler nav-bar-menu">メニュー</span>
+            <div class="thumbnail"><%= image_tag @user.to_s, class: 'thumbnail_img' %></div>
+            <div>
+              <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler nav-bar-menu">メニュー</span>
+              </div>
+              <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="header_menu navbar-nav">
+                  <li class="nav-item active">
+                    <%= link_to new_room_path do %>
+                    ルーム登録
+                    <% end %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to reserves_path do %>
+                    予約済ルーム一覧
+                    <% end %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to rooms_path do %>
+                    登録済ルーム一覧
+                    <% end %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to edit_user_registration_path do %>
+                    編集
+                    <% end %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                    ログアウト
+                    <% end %>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <nav class="collapse navbar-collapse" id="navbarNav">
-              <ul class="header_menu navbar-nav">
-                <li class="nav-item active">
-                  <%= link_to new_room_path do %>
-                  ルーム登録
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to reserves_path do %>
-                  予約済ルーム一覧
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to rooms_path do %>
-                  登録済ルーム一覧
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to edit_user_registration_path do %>
-                  編集
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to destroy_user_session_path, method: :delete do %>
-                  ログアウト
-                  <% end %>
-                </li>
-              </ul>
-            </nav>
         <% end %>
       </div>
 
     </header>
 
     <%= yield %>
-
+    <p><%= link_to "戻る", :back %></p>
     <p><%= link_to "Topページへ", :mains %></p>
 
     <div class="wrapper">

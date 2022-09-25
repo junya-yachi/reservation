@@ -8,17 +8,19 @@
       <th>ルーム紹介</th>
       <th>料金</th>
       <th>作成日</th>
+      <th>id</th>
     </tr>
   </thead>
 
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
-        <td><%= room.image %></td>
+        <td><%= image_tag room.image.to_s %></td>
         <td><%= link_to "#{room.name}", room %></td>
         <td><%= room.introduction %></td>
         <td><%= room.rent %></td>
         <td><%= room.created_at %></td>
+        <td><%= room.users_id %></td>
       </tr>
     <% end %>
   </tbody>

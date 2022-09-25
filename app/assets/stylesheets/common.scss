@@ -22,6 +22,15 @@ body {
 
 .header_right {
   float: right;
+  display: flex;
+}
+
+.thumbnail {
+  line-height: 65px;
+}
+
+.thumbnail_img {
+  border-radius: 50%;
 }
 
 .log_in_btn {
@@ -66,7 +75,7 @@ body {
 }
 
 .wrapper {
-  min-height: 50vh;
+  min-height: 75vh;
   position: relative;
 }
 

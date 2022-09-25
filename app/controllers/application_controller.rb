@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
 
   private
   def afeter_sign_in_path_for(resource)
-    mains_index_path(resource)
+    mains_path(resource)
   end
   
   # def afeter_out_in_path_for(resource)

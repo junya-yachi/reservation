@@ -29,6 +29,7 @@
       <td><%= f.file_field :image, placeholder: "ファイルを選択" %></td>
     </tr>
   </table>
+  <%= f.hidden_field :users_id, value: @user %>
 
   <div>
     <ul>

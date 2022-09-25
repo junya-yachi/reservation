@@ -10,6 +10,19 @@ li {
   list-style-type: none;
 }
 
-.room_reserve_container {
+
+.room_show_container {
   display: flex;
+  text-align: center;
+}
+
+
+.room_reserve_container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.room_img {
+  width: 700px;
 }

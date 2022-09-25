@@ -14,12 +14,12 @@
   </thead>
 
   <tbody>
-    <% @rooms.each do |room| %>
+    <% @reserves.each do |reserve| %>
       <tr>
-        <td><%= room.image %></td>
-        <td><%= link_to "#{room.name}", room %></td>
-        <td><%= room.introduction %></td>
-        <td><%= room.rent %></td>
+        <td><%= reserve.image %></td>
+        <td><%= link_to "#{reserve.name}", reserve %></td>
+        <td><%= reserve.introduction %></td>
+        <td><%= reserve.rent %></td>
       </tr>
     <% end %>
 

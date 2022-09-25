@@ -63,7 +63,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:email, :reset_password_token, :remember_created_at, :name, :image, :password, :password_confirmation, :current_password)
   end
 
-  def after_sign_in_path_for(resource)
-    rooms_index_path(resource)
-  end
 end
