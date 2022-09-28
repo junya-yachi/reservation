@@ -16,11 +16,21 @@
       <div class="header_container">
         <div class="header_left">
           <%= link_to image_tag("potelogo.png"), :mains %>
-          <%= form_tag(rooms_path, :method => "get") do %>
-            <%= search_field :adress_cont, placeholder: "エリア" %>
+          <%= search_form_for @q do |f| %>
+            <ul>
+              <li>
+                <%= f.search_field :adress_cont, placeholder: "エリア" %>
+                <% f.submit %>
+              </li>
+            </ul>
           <% end %>
-          <%= form_tag(rooms_path, :method => "get") do %>
-            <%= text_field_tag :search, '', placeholder: "キーワード" %>
+          <%= search_form_for @q do |f| %>
+            <ul>
+              <li>
+                <%= f.search_field :introduction_cont, placeholder: "キーワード" %>
+                <% f.submit %>
+              </li>
+            </ul>
           <% end %>
         </div>
 
@@ -36,7 +46,7 @@
           </div>
         <% else %>
           <div class="header_right">
-            <div class="thumbnail"><%= image_tag @user.to_s, class: 'thumbnail_img' %></div>
+            <div class="thumbnail"><%= image_tag current_user.image.to_s, class: 'thumbnail_img' %></div>
             <div>
               <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler nav-bar-menu">メニュー</span>

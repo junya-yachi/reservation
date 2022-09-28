@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'reserves/index'
-  get 'rooms/index'
   get 'mains/index'
+  get 'rooms/index'
+  get 'reserves/index'
+  
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 devise_for :users, controllers: {
   registrations: 'users/registrations',
@@ -18,5 +19,5 @@ devise_for :users, controllers: {
   resources :rooms
   resources :reserves
 
-  get 'search' => 'rooms#search'
+  get 'search' => 'searches#search'
 end

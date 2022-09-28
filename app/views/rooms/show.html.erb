@@ -20,11 +20,11 @@
     </div>
 
     <div>
-      <%= form_with model:@reserve do |f| %>
+      <%= form_with scope: :reserve, url: new_reserf_path, method: :get do |f| %>
         <table>
           <tr>
             <td>
-              <%= @room.rent %> / 日
+              ¥<%= @room.rent %> / 日
             </td>
           </tr>
           <tr>
@@ -45,11 +45,12 @@
               <%= f.text_field :num_people %>
             </td>
           </tr>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :room_id, value: @room.id %>
           <tr>
             <td><div class="reseved"><%= f.submit "予約する", class: 'submit_btn' %></div></td>
           </tr>
         </table>
-          <%= f.hidden_field :user_id, value: @user %>
       <% end %>
     </div>
   </div>

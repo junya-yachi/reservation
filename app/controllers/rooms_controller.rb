@@ -1,12 +1,12 @@
 class RoomsController < ApplicationController
   def index
     @rooms = Room.all
-    @user = current_user.image
+    @q = Room.ransack(params[:q])
+    @rooms = @q.result(distinct: true)
   end
   
   def new
     @room = Room.new
-    @user = current_user.image
   end
 
   def create
@@ -22,7 +22,6 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @reserve = Reserve.new
-    @user = current_user.image
   end
 
 end

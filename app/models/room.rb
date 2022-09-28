@@ -9,10 +9,10 @@ class Room < ApplicationRecord
   validates :adress, presence: true
 
   def self.ransackable_attributes(auth_object = nil)
-    %w[adress]
+    %w[adress introduction]
   end
 
   def self.ransackable_associations(auth_object = nil)
-    []
+    %w[]
   end
 end

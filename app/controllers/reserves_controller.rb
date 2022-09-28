@@ -2,25 +2,25 @@ class ReservesController < ApplicationController
   def index
     @reserves = Reserve.all
     @rooms = Room.all
-    @user = current_user.image
   end
 
   def new 
-    @reserve = reserve.new
-    @user = current_user.image
+    @reserve = Reserve.new(params.require(:reserve).permit(:start_day, :end_day, :num_people, :user_id, :room_id))
+    @room = Room.find_by(id: @reserve.room_id)
   end
 
   def create
-    @reserve = Reserve.new(params.require(:reserve).permit(:start_day, :end_day, :num_people))
-    if @reserve.after_save
+    @room = Room.find_by(params[:id])
+    @reserve = Reserve.new(params.require(:reserve).permit(:start_day, :end_day, :num_people, :user_id, :room_id))
+    if @reserve.save
       flash[:notice] = "ルームの予約が完了しました"
-      redirect_to :reserf
+      redirect_to :reserves
+    else
+      flash[:notice] = "ルームの予約が出来ませんでした。"
     end
-    @user = current_user.image
   end
 
   def show
     @reserve = Reserve.find(params[:id])
-    @user = current_user.image
   end
 end

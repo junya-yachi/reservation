@@ -3,10 +3,10 @@
 <section class="hero_container">
   <div class="hero_search">
     <p>Potepan Shareでまだ体験したことのない旅をしよう</p>
-    <%= form_tag(rooms_path, :method => "get") do %>
-      <%= search_field :adress_cont, placeholder: "エリア" %>
+    <%= search_form_for @q do |f| %>
+      <%= f.search_field :adress_cont, placeholder: "エリア" %>
     <div class="hero_searh_btn">
-      <%= submit_tag "探す", :adress => nil, class: "hero_btn" %>
+      <%= f.submit %>
     </div>
     <% end %>
   </div>
@@ -19,19 +19,19 @@
     <div class="img_container">
       <div class="img_item">
         <span class="area_name">東京</span>
-        <%= link_to image_tag("img_tokyo.jpg", class:"area_img"), :rooms %>
+        <%= link_to image_tag("img_tokyo.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E6%9D%B1%E4%BA%AC' %>
       </div>
       <div class="img_item">
         <span class="area_name">大阪</span>
-        <%= link_to image_tag("img_osaka.jpg", class:"area_img"), :rooms %>
+        <%= link_to image_tag("img_osaka.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E5%A4%A7%E9%98%AA' %>
       </div>
       <div class="img_item">
         <span class="area_name">京都</span>
-        <%= link_to image_tag("img_kyoto.jpg", class:"area_img"), :rooms %>
+        <%= link_to image_tag("img_kyoto.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E4%BA%AC%E9%83%BD' %>
       </div>
       <div class="img_item">
         <span class="area_name">札幌</span>
-        <%= link_to image_tag("img_sapporo.jpg", class:"area_img"), :rooms %>
+        <%= link_to image_tag("img_sapporo.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E6%9C%AD%E5%B9%8C' %>
       </div>
     </div>
   </div>

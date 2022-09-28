@@ -16,19 +16,15 @@
   <tbody>
     <% @reserves.each do |reserve| %>
       <tr>
-        <td><%= reserve.image %></td>
-        <td><%= link_to "#{reserve.name}", reserve %></td>
-        <td><%= reserve.introduction %></td>
-        <td><%= reserve.rent %></td>
-      </tr>
-    <% end %>
-
-    <% @reserves.each do |reserve| %>
-      <tr>
+        <td><%= image_tag reserve.room.image.to_s, size: '240x160' %></td>
+        <td><%= link_to "#{reserve.room.name}", reserve %></td>
+        <td><%= reserve.room.introduction %></td>
+        <td><%= reserve.room.rent %></td>
         <td><%= reserve.start_day %></td>
         <td><%= reserve.end_day %></td>
         <td><%= reserve.created_at %></td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
