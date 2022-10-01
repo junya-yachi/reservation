@@ -2,11 +2,11 @@
 
 <section class="hero_container">
   <div class="hero_search">
-    <p>Potepan Shareでまだ体験したことのない旅をしよう</p>
+    <h4>Potepan Shareでまだ体験したことのない旅をしよう</h4>
     <%= search_form_for @q do |f| %>
-      <%= f.search_field :adress_cont, placeholder: "エリア" %>
-    <div class="hero_searh_btn">
-      <%= f.submit %>
+      <%= f.search_field :adress_cont, class: 'hero_search_fld', placeholder: "エリア" %>
+    <div>
+      <%= f.submit '探す', class: 'hero_searh_btn' %>
     </div>
     <% end %>
   </div>
@@ -39,6 +39,3 @@
 
 
 </main>
-
-<%= link_to "編集画面", edit_user_registration_path %>
-<%= link_to "ルーム一覧", :rooms %>

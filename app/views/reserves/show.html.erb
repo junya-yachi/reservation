@@ -1,37 +1,31 @@
 <div class="room_reserve_container">
+  <h2>ルーム詳細</h2>
 
   <div class="room_show_container">
-    <div class="room_show_box">
-      <div class="room_title">
-        ルーム名 : <%= @room.name %>
-      </div>
-      <div>
-        <% if @room.image? %>
-          <%= image_tag @room.image.to_s, class: 'room_img' %>
-        <% else %>
-          <%= image_tag("room01.jpg", class: 'room_img') %>
-        <% end %>
-      </div>
-      <div class="room_detail">
-        <div>
-          <% if @room.user.image.nil? %>
-            <%= image_tag("人物のアイコン素材 その3.png", class: 'room_show_img') %>
-          <% else %>
-            <%= image_tag(@users.image.to_s, class: 'room_show_img') %>
-          <% end %>
-        </div>
-        <div class="room_address">
-          住所 : <%= @room.adress %>
-        </div>
-      </div>
-      <div class="room_introduction">
-        <p>ルーム説明 : </p>
-        <%= @room.introduction %>
-      </div>
+    <div>
+      <table>
+        <tr>
+          <td>
+            <% if @room.image? %>
+              <%= image_tag @room.image.to_s, class: 'room_img' %>
+            <% else %>
+              <%= image_tag("room01.jpg", class: 'room_img') %>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td><%= @room.name %></td>
+        </tr>
+        <tr>
+          <td><%= @room.adress %></td>
+        </tr>
+        <tr>
+          <td><%= @room.introduction %></td>
+        </tr>
+      </table>
     </div>
 
-    <div class="room_show_reserver">
-      <p>ルーム予約</p>
+    <div>
       <%= form_with scope: :reserve, url: new_reserf_path, method: :get do |f| %>
         <table>
           <tr>

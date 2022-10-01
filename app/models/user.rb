@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :reserves
 
   mount_uploader :image, ImageUploader
+  attr_accessor :current_password
 end

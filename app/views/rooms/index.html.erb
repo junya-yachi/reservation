@@ -1,29 +1,22 @@
-<h1>登録済みルーム一覧(検索結果:<%= @rooms.count %>件)</h1>
+<section class="room_index_container">
+  <h1 class="room_title">ルーム一覧(検索結果:<%= @rooms.count %>件)</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>ルーム画像</th>
-      <th>ルーム名</th>
-      <th>ルーム紹介</th>
-      <th>料金</th>
-      <th>作成日</th>
-      <th>id</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= image_tag room.image.to_s, size: '240x160' %></td>
-        <td><%= link_to "#{room.name}", room %></td>
-        <td><%= room.introduction %></td>
-        <td>¥<%= room.rent %></td>
-        <td><%= room.created_at %></td>
-        <td><%= room.users_id %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
+      <div class="room_box">
+        <% @rooms.each do |room| %>
+            <div class="room_frame_inner">
+              <%= link_to (room) do %>
+              <% if room.image? %>
+                <%= image_tag room.image.to_s, size: '320x240' %>
+              <% else %>
+                <%= image_tag("room01.jpg", size: '320x240') %>
+              <% end %>
+              <div class="room_link">
+                <p class="room_link_title"><%= room.name %></p>
+                <p><%= room.adress %></p>
+                <p class="room_link_rent">¥<%= room.rent %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+</section>

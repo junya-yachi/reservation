@@ -1,6 +1,7 @@
 <div>
   <h1>予約内容確認</h1>
   <div>
+    <%= render "shared/error", obj: @reserve %>
     <%= form_with model: @reserve do |f| %>
       <table>
         <tr>
