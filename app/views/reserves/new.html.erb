@@ -1,43 +1,45 @@
-<div>
-  <h1>予約内容確認</h1>
-  <div>
-    <%= render "shared/error", obj: @reserve %>
-    <%= form_with model: @reserve do |f| %>
-      <table>
-        <tr>
-          <td>
-            <%= f.label :start_day, "開始日" %><br />
-            <%= f.text_field :start_day, readonly: true, value: @reserve.start_day %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <%= f.label :end_day, "終了日" %><br />
-            <%= f.text_field :end_day, readonly: true, value: @reserve.end_day %>
-          </td>
-        </tr>
-        <tr>
-          <td>□使用日数 : <%= (@reserve.end_day - @reserve.start_day).to_i %>日</td>
-        </tr>
-        <tr>
-          <td>
-            <%= f.label :num_people, "人数" %><br />
-            <%= f.text_field :num_people, readonly: true, value: @reserve.num_people %>人</td>
-        </tr>
-        <tr>
-          <td>
-            □合計金額 : ¥<%= (@room.rent * @reserve.num_people) %>
-          </td>
-        </tr>
-        <tr>
-          <td>上記内容でよろしければ「予約を確定」を押してください。</td>
-        </tr>
-      </table>
-      <%= f.hidden_field :user_id, value: @reserve.user_id %>
-      <%= f.hidden_field :room_id, value: @reserve.room_id %>
-      <div>
-        <%= f.submit "予約を確定" %>
-      </div>
-    <% end %>
+<section class="reserve_container">
+  <div class="reserve_form">
+    <h1>予約内容確認</h1>
+    <div class="reserve_confirm">
+      <%= render "shared/error", obj: @reserve %>
+      <%= form_with model: @reserve do |f| %>
+        <table>
+          <tr>
+            <td>
+              <%= f.label :start_day, "開始日" %><br />
+              <%= f.text_field :start_day, readonly: true, value: @reserve.start_day, class: 'days_field' %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= f.label :end_day, "終了日" %><br />
+              <%= f.text_field :end_day, readonly: true, value: @reserve.end_day, class: 'days_field' %>
+            </td>
+          </tr>
+          <tr>
+            <td>□使用日数 : <%= (@reserve.end_day - @reserve.start_day).to_i %>日</td>
+          </tr>
+          <tr>
+            <td>
+              <%= f.label :num_people, "人数" %><br />
+              <%= f.text_field :num_people, readonly: true, value: @reserve.num_people, class: 'num_people_field' %>人</td>
+          </tr>
+          <tr>
+            <td>
+              □合計金額 : ¥<%= (@room.rent * @reserve.num_people) %>
+            </td>
+          </tr>
+          <tr>
+            <td>上記内容でよろしければ「予約を確定」を押してください。</td>
+          </tr>
+        </table>
+        <%= f.hidden_field :user_id, value: @reserve.user_id %>
+        <%= f.hidden_field :room_id, value: @reserve.room_id %>
+        <div>
+          <%= f.submit "予約を確定", class: 'reserve_submit_btn' %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>

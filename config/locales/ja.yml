@@ -10,3 +10,12 @@ ja:
       mime_types_processing_error: "MIME::Typesのファイルを処理できませんでした。Content-Typeを確認してください。エラーメッセージ: %{e}"
       mini_magick_processing_error: "MiniMagickがファイルを処理できませんでした。画像を確認してください。エラーメッセージ: %{e}"
       not_saved: "処理を完了出来ませんでした。"
+
+  activerecord:
+    models:
+      reserve: 予約
+    attributes:
+      reserve:
+        start_day: 開始日
+        end_day: 終了日
+        num_people: 人数

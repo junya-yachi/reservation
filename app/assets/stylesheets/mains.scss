@@ -26,10 +26,6 @@
   left: calc(50% - 480px);
 }
 
-span {
-  color: #fff;
-}
-
 .menu {
   background: #fff;
 }
@@ -93,7 +89,8 @@ span {
   z-index: 1;
   margin: auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
+  -webkit-text-stroke: 1px #111;
 }
 
 .area_img {

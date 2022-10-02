@@ -85,15 +85,53 @@ li {
 }
 
 .room_address {
+  height: 37px;
+  line-height: 40px;
   padding-left: 32px;
-  font-size: 24px;
 }
 
 .room_show_reserver {
-  border: 1px solid #eaedef;
+  padding: 0 8px 8px;
 }
 
-// reserve
+.room_show_reserver > p {
+  padding-bottom: 16px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.reserve_form {
+  border: 1px solid #eaedef;
+  padding: 4px 16px 32px;
+}
+
+.rent {
+  margin-bottom: 4px;
+}
+
+.rent + div {
+  font-size: 24px;
+}
+
+.label_p {
+  margin: 16px 0 4px;
+}
+
+.days_field {
+  width: 100%;
+}
+.room_submit_btn {
+  width: 100%;
+  background: #4a90e2;
+  color: #fff;
+  border: 1px solid #007bff;
+  cursor: pointer;
+  border-radius: 0.25em;
+  margin-top: 16px;
+  text-align: center;
+}
+
 .room_reserve_container {
   width       : 100%;
   margin-left : auto;

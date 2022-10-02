@@ -24,6 +24,7 @@ class ReservesController < ApplicationController
   def show
     @reserve = Reserve.find(params[:id])
     @room = @reserve.room
+    @users = @room.user
   end
 
   private

@@ -20,6 +20,9 @@ class RoomsController < ApplicationController
   end
   
   def show
+    if !logged_in?
+      render("users/sessions/new")
+    end
     @room = Room.find(params[:id])
     @reserve = Reserve.new
     @users = @room.user
