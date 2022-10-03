@@ -27,7 +27,7 @@
           </tr>
           <tr>
             <td>
-              □合計金額 : ¥<%= (@room.rent * @reserve.num_people) %>
+              □合計金額 : ¥<%= (@room.rent * @reserve.num_people).to_s(:delimited) %>
             </td>
           </tr>
           <tr>

@@ -89,6 +89,15 @@ body {
   text-align: center;
 }
 
+.bi-arrow-up-circle-fill {
+  color: #4a90e2;
+  font-size: 48px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1;
+}
+
 .wrapper {
   min-height: 75vh;
   position: relative;

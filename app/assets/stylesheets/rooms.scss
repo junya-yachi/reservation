@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.registration_room th  {
-  padding: 10px 20px;
-}
-
 li {
   list-style-type: none;
 }
@@ -53,6 +49,60 @@ li {
 .room_link_rent {
   position: relative;
   text-align: right;
+}
+
+// new
+
+.room_new_form {
+  background: #fff;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px;
+  border: 1px solid #eaedef;
+}
+
+.room_new_title {
+  border-bottom: 1px solid #eaedef;
+  padding-bottom: 56px;
+}
+
+.room_new_label {
+  margin-bottom: 0;
+}
+
+.room_new_label::after {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+.room_new_box {
+  padding: 16px 0;
+  border-bottom: 1px solid #eaedef;
+  overflow: hidden;
+}
+
+.room_new_field {
+  width: 100%;
+}
+
+.room_new_box > p {
+  float: left;
+  text-align: left;
+  margin: 16px 8px;
+  width: 124px;
+}
+
+.room_new_box > div {
+  float: left;
+  text-align: left;
+  padding: 16px 8px;
+  width: calc(100% - 156px);
 }
 
 // show
@@ -121,6 +171,7 @@ li {
 .days_field {
   width: 100%;
 }
+
 .room_submit_btn {
   width: 100%;
   background: #4a90e2;
@@ -140,4 +191,32 @@ li {
 
 .room_img {
   width: 700px;
+}
+
+// registration
+
+.room_list {
+  margin: 20px;
+}
+
+.room_list > h1 {
+  font-weight: bold;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.room_list_tr {
+  text-align: center;
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
+
+.room_list_tr > th {
+  padding: 8px 16px;
+  font-size: 20px;
+}
+
+.room_list_tr > td {
+  padding: 8px 16px;
+  font-size: 20px;
 }

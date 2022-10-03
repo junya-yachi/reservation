@@ -35,6 +35,7 @@ gem 'ransack'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'rails-i18n'
+gem 'jquery-rails'
 
 source 'https://rubygems.org'
 

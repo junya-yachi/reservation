@@ -36,7 +36,7 @@
       <div class="reserve_form">
         <div class="reserve_label_p">
           <p class="rent">宿泊料金</p>
-          ¥<%= @room.rent %> / 日
+          ¥<%= @room.rent.to_s(:delimited) %> / 日
         </div>
         <div class="reserve_label_p">
           <p>開始日</p>

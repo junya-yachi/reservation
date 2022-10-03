@@ -43,7 +43,7 @@
             <tr>
               <td>
                 <p class="rent">宿泊料金</p>
-                <div>¥ <%= @room.rent %> / 日</div>
+                <div>¥ <%= @room.rent.to_s(:delimited) %> / 日</div>
               </td>
             </tr>
             <tr>
