@@ -13,8 +13,8 @@ li {
 
 .room_title {
   padding-bottom: 16px;
-  font-size: 32px;
-  font-weight: bold;
+  font-size     : 32px;
+  font-weight   : bold;
 }
 
 .room_box {
@@ -37,33 +37,33 @@ li {
 }
 
 .room_link p {
-  font-size: 20px;
+  font-size    : 20px;
   margin-bottom: 8px;
 }
 
 .room_link_title {
-  color: gray;
+  color      : gray;
   font-weight: bold;
 }
 
 .room_link_rent {
-  position: relative;
+  position  : relative;
   text-align: right;
 }
 
 // new
 
 .room_new_form {
-  background: #fff;
-  max-width: 640px;
-  margin-left: auto;
+  background  : #fff;
+  max-width   : 640px;
+  margin-left : auto;
   margin-right: auto;
-  padding: 32px;
-  border: 1px solid #eaedef;
+  padding     : 32px;
+  border      : 1px solid #eaedef;
 }
 
 .room_new_title {
-  border-bottom: 1px solid #eaedef;
+  border-bottom : 1px solid #eaedef;
   padding-bottom: 56px;
 }
 
@@ -72,19 +72,19 @@ li {
 }
 
 .room_new_label::after {
-  content: "必須";
-  color: #fff;
+  content         : "必須";
+  color           : #fff;
   background-color: #ff0000a8;
-  font-size: 12px;
-  border-radius: 6px;
-  padding: 4px;
-  margin: 0 5px;
+  font-size       : 12px;
+  border-radius   : 6px;
+  padding         : 4px;
+  margin          : 0 5px;
 }
 
 .room_new_box {
-  padding: 16px 0;
+  padding      : 16px 0;
   border-bottom: 1px solid #eaedef;
-  overflow: hidden;
+  overflow     : hidden;
 }
 
 .room_new_field {
@@ -92,24 +92,24 @@ li {
 }
 
 .room_new_box > p {
-  float: left;
+  float     : left;
   text-align: left;
-  margin: 16px 8px;
-  width: 124px;
+  margin    : 16px 8px;
+  width     : 124px;
 }
 
 .room_new_box > div {
-  float: left;
+  float     : left;
   text-align: left;
-  padding: 16px 8px;
-  width: calc(100% - 156px);
+  padding   : 16px 8px;
+  width     : calc(100% - 156px);
 }
 
 // show
 .room_show_container {
-  display   : flex;
+  display        : flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top     : 40px;
 }
 
 .room_show_box {
@@ -117,26 +117,26 @@ li {
 }
 
 .room_detail {
-  display: flex;
-  padding: 16px 1px;
-  line-height: 74px;
+  display      : flex;
+  padding      : 16px 1px;
+  line-height  : 74px;
   border-bottom: 1px solid #eaedef;
 }
 
 .room_introduction {
-  padding: 16px 1px;
+  padding      : 16px 1px;
   border-bottom: 1px solid #eaedef;
 }
 
 .room_show_img {
-  width: 64px;
-  height: 64px;
+  width        : 64px;
+  height       : 64px;
   border-radius: 50%;
 }
 
 .room_address {
-  height: 37px;
-  line-height: 40px;
+  height      : 37px;
+  line-height : 40px;
   padding-left: 32px;
 }
 
@@ -146,13 +146,13 @@ li {
 
 .room_show_reserver > p {
   padding-bottom: 16px;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 0;
+  font-size     : 32px;
+  font-weight   : bold;
+  margin-bottom : 0;
 }
 
 .reserve_form {
-  border: 1px solid #eaedef;
+  border : 1px solid #eaedef;
   padding: 4px 16px 32px;
 }
 
@@ -173,14 +173,14 @@ li {
 }
 
 .room_submit_btn {
-  width: 100%;
-  background: #4a90e2;
-  color: #fff;
-  border: 1px solid #007bff;
-  cursor: pointer;
+  width        : 100%;
+  background   : #4a90e2;
+  color        : #fff;
+  border       : 1px solid #007bff;
+  cursor       : pointer;
   border-radius: 0.25em;
-  margin-top: 16px;
-  text-align: center;
+  margin-top   : 16px;
+  text-align   : center;
 }
 
 .room_reserve_container {
@@ -200,23 +200,23 @@ li {
 }
 
 .room_list > h1 {
-  font-weight: bold;
-  margin-left: 16px;
+  font-weight  : bold;
+  margin-left  : 16px;
   margin-bottom: 24px;
 }
 
 .room_list_tr {
-  text-align: center;
-  border-top: 1px solid #eaedef;
+  text-align   : center;
+  border-top   : 1px solid #eaedef;
   border-bottom: 1px solid #eaedef;
 }
 
 .room_list_tr > th {
-  padding: 8px 16px;
+  padding  : 8px 16px;
   font-size: 20px;
 }
 
 .room_list_tr > td {
-  padding: 8px 16px;
+  padding  : 8px 16px;
   font-size: 20px;
 }

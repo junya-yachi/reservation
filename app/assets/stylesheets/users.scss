@@ -1,35 +1,33 @@
 .icon_image {
-  width: 45px;
-  height: 45px;
+  width        : 45px;
+  height       : 45px;
   border-radius: 100%;
-  object-fit: cover;
+  object-fit   : cover;
 }
 
 .log_in_frame {
-  max-width: 600px;
-  text-align: center;
-  padding: 24px;
-  margin-left: auto;
+  max-width   : 600px;
+  text-align  : center;
+  padding     : 24px;
+  margin-left : auto;
   margin-right: auto;
 }
 
 .log_in_form {
-  display: flex;
+  display        : flex;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom  : 8px;
 }
 
 .required_b::before {
-  content: "必須";
-  color: #fff;
+  content         : "必須";
+  color           : #fff;
   background-color: #ff0000a8;
-  font-size: 12px;
-  border-radius: 6px;
-  padding: 4px;
-  margin: 0 5px;
+  font-size       : 12px;
+  border-radius   : 6px;
+  padding         : 4px;
+  margin          : 0 5px;
 }
-
-
 
 // new
 
@@ -44,31 +42,31 @@
 }
 
 .user_form {
-  background: #fff;
-  max-width: 880px;
-  margin-left: auto;
+  background  : #fff;
+  max-width   : 880px;
+  margin-left : auto;
   margin-right: auto;
-  padding: 32px;
-  border: 1px solid #eaedef;
+  padding     : 32px;
+  border      : 1px solid #eaedef;
 }
 
 .user_field {
-  padding: 8px;
+  padding      : 8px;
   border-bottom: 1px solid #eaedef;
 }
 
 .edit_img {
-  width: 64px;
-  height: 64px;
+  width        : 64px;
+  height       : 64px;
   border-radius: 50%;
   margin-bottom: 8px;
 }
 
 .user_submit_btn {
-  background: #4a90e2;
-  color: #fff;
-  border: 1px solid #007bff;
-  cursor: pointer;
+  background   : #4a90e2;
+  color        : #fff;
+  border       : 1px solid #007bff;
+  cursor       : pointer;
   border-radius: 0.25em;
-  margin: 8px;
+  margin       : 8px;
 }
