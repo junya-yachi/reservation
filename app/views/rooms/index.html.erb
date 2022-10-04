@@ -1,0 +1,26 @@
+<section class="room_index_container">
+  <h1 class="room_title">ルーム一覧(検索結果:<%= @rooms.count %>件)</h1>
+  
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+
+  <div class="room_box">
+    <% @rooms.each do |room| %>
+        <div class="room_frame_inner">
+          <%= link_to (room) do %>
+          <% if room.image? %>
+            <%= image_tag room.image.to_s, size: '320x240' %>
+          <% else %>
+            <%= image_tag("room01.jpg", size: '320x240') %>
+          <% end %>
+          <div class="room_link">
+            <p class="room_link_title"><%= room.name %></p>
+            <p><%= room.adress %></p>
+            <p class="room_link_rent">¥<%= room.rent %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>

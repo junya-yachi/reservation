@@ -1,0 +1,56 @@
+<div class="room_reserve_container">
+
+  <div class="room_show_container">
+    <div class="room_show_box">
+      <div class="room_title">
+        ルーム名 : <%= @room.name %>
+      </div>
+      <div>
+        <% if @room.image? %>
+          <%= image_tag @room.image.to_s, class: 'room_img' %>
+        <% else %>
+          <%= image_tag("room01.jpg", class: 'room_img') %>
+        <% end %>
+      </div>
+      <div class="room_detail">
+        <div>
+          <%= image_tag(@users.image.to_s, class: 'room_show_img') %>
+        </div>
+        <div>
+          <div class="room_address">
+            貸主 : <%= @room.name %>さん
+          </div>
+          <div class="room_address">
+            貸部屋住所 : <%= @room.adress %>
+          </div>
+        </div>
+      </div>
+      <div class="room_introduction">
+        <p>ルーム説明 : </p>
+        <%= @room.introduction %>
+      </div>
+    </div>
+
+    <div class="room_reserve_show">
+      <p>予約状況</p>
+      <div class="reserve_form">
+        <div class="reserve_label_p">
+          <p class="rent">宿泊料金</p>
+          ¥<%= @room.rent.to_s(:delimited) %> / 日
+        </div>
+        <div class="reserve_label_p">
+          <p>開始日</p>
+          <%= @reserve.start_day %>
+        </div>
+        <div class="reserve_label_p">
+          <p>終了日</p>
+          <%= @reserve.end_day %>
+        </div>
+        <div class="reserve_label_p">
+          <p>人数</p>
+          <%= @reserve.num_people %> 人
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

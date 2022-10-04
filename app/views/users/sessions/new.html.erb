@@ -1,0 +1,35 @@
+<section class="user_container">
+
+    <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="user_form">
+    <div class="log_in_frame">
+      <h2>ログイン</h2>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="log_in_form">
+          <div class="required_b"></div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+        </div>
+
+        <div class="log_in_form">
+          <div class="required_b"></div>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, "自動ログイン" %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "ログイン", class: 'user_submit_btn' %>
+        </div>
+      <% end %>
+
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</section>

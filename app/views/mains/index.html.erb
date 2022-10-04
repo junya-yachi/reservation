@@ -1,0 +1,43 @@
+<section class="hero_container">
+  <% if flash[:notice] %>
+    <p class="notice main_notice" ><%= flash[:notice] %></p>
+  <% end %>
+
+  <div class="hero_search">
+    <h4>Potepan Shareでまだ体験したことのない旅をしよう</h4>
+    <%= search_form_for @q do |f| %>
+      <%= f.search_field :adress_cont, class: 'hero_search_fld', placeholder: "エリア" %>
+    <div>
+      <%= f.submit '探す', class: 'hero_searh_btn' %>
+    </div>
+    <% end %>
+  </div>
+</section>
+
+<main class="main_container">
+  <div class="main_area">
+    <h1 class="main_title">オススメのエリア</h1>
+    
+    <div class="img_container">
+      <div class="img_item">
+        <span class="area_name">東京</span>
+        <%= link_to image_tag("img_tokyo.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E6%9D%B1%E4%BA%AC' %>
+      </div>
+      <div class="img_item">
+        <span class="area_name">大阪</span>
+        <%= link_to image_tag("img_osaka.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E5%A4%A7%E9%98%AA' %>
+      </div>
+      <div class="img_item">
+        <span class="area_name">京都</span>
+        <%= link_to image_tag("img_kyoto.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E4%BA%AC%E9%83%BD' %>
+      </div>
+      <div class="img_item">
+        <span class="area_name">札幌</span>
+        <%= link_to image_tag("img_sapporo.jpg", class:"area_img"), 'http://localhost:3000/rooms?q%5Badress_cont%5D=%E6%9C%AD%E5%B9%8C' %>
+      </div>
+    </div>
+  </div>
+
+
+
+</main>

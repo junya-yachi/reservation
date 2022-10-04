@@ -1,0 +1,45 @@
+<section class="room_new_container">
+  
+  <div class="room_new_form">
+    <div class="log_in_frame"> 
+      <h1 class="room_new_title">ルーム情報登録</h1>
+
+      <%= render "shared/error", obj: @room %>
+
+      <%= form_with model: @room do |f| %>
+        <div class="registration_room">
+          <div class="room_new_box">
+            <p><%= f.label :name, "ルーム名", class: 'room_new_label' %></p>
+            <div><%= f.text_field :name, placeholder: "ルーム名を入力", class: 'room_new_field' %></div>
+          </div>
+
+          <div class="room_new_box">
+            <p><%= f.label :introduction, "ルーム紹介", class: 'room_new_label' %></p>
+            <div><%= f.text_field :introduction, placeholder: "ルーム説明を入力", class: 'room_new_field' %></div>
+          </div>
+
+          <div class="room_new_box">
+            <p><%= f.label :rent, "料金", class: 'room_new_label' %></p>
+            <div><%= f.text_field :rent, placeholder: "1日あたりの料金を入力", class: 'room_new_field' %></div>
+          </div>
+
+          <div class="room_new_box">
+            <p><%= f.label :adress, "住所", class: 'room_new_label' %></p>
+            <div><%= f.text_field :adress, placeholder: "住所を入力", class: 'room_new_field' %></div>
+          </div>
+
+          <div class="room_new_box">
+            <p><%= f.label :image, "ルーム画像", class: 'room_new_label' %></p>
+            <div><%= f.file_field :image, placeholder: "ファイルを選択", class: 'room_new_field' %></div>
+          </div>
+        </div>
+        <%= f.hidden_field :users_id, value: current_user.id %>
+
+        <div>
+          <%= f.submit "登録", class: 'room_submit_btn ' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</section>

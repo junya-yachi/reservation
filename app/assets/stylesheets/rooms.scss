@@ -1,0 +1,222 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+li {
+  list-style-type: none;
+}
+
+// index
+.room_index_container {
+  margin: 20px;
+}
+
+.room_title {
+  padding-bottom: 16px;
+  font-size     : 32px;
+  font-weight   : bold;
+}
+
+.room_box {
+  display  : flex;
+  flex-wrap: wrap;
+}
+
+.room_frame_inner {
+  margin-right : 24px;
+  margin-bottom: 24px;
+}
+
+.room_frame_inner {
+  border: 1px solid #e2e2e2;
+}
+
+.room_link {
+  color  : black;
+  padding: 8px;;
+}
+
+.room_link p {
+  font-size    : 20px;
+  margin-bottom: 8px;
+}
+
+.room_link_title {
+  color      : gray;
+  font-weight: bold;
+}
+
+.room_link_rent {
+  position  : relative;
+  text-align: right;
+}
+
+// new
+
+.room_new_form {
+  background  : #fff;
+  max-width   : 640px;
+  margin-left : auto;
+  margin-right: auto;
+  padding     : 32px;
+  border      : 1px solid #eaedef;
+}
+
+.room_new_title {
+  border-bottom : 1px solid #eaedef;
+  padding-bottom: 56px;
+}
+
+.room_new_label {
+  margin-bottom: 0;
+}
+
+.room_new_label::after {
+  content         : "必須";
+  color           : #fff;
+  background-color: #ff0000a8;
+  font-size       : 12px;
+  border-radius   : 6px;
+  padding         : 4px;
+  margin          : 0 5px;
+}
+
+.room_new_box {
+  padding      : 16px 0;
+  border-bottom: 1px solid #eaedef;
+  overflow     : hidden;
+}
+
+.room_new_field {
+  width: 100%;
+}
+
+.room_new_box > p {
+  float     : left;
+  text-align: left;
+  margin    : 16px 8px;
+  width     : 124px;
+}
+
+.room_new_box > div {
+  float     : left;
+  text-align: left;
+  padding   : 16px 8px;
+  width     : calc(100% - 156px);
+}
+
+// show
+.room_show_container {
+  display        : flex;
+  justify-content: center;
+  margin-top     : 40px;
+}
+
+.room_show_box {
+  margin-right: 40px;
+}
+
+.room_detail {
+  display      : flex;
+  padding      : 16px 1px;
+  line-height  : 74px;
+  border-bottom: 1px solid #eaedef;
+}
+
+.room_introduction {
+  padding      : 16px 1px;
+  border-bottom: 1px solid #eaedef;
+}
+
+.room_show_img {
+  width        : 64px;
+  height       : 64px;
+  border-radius: 50%;
+}
+
+.room_address {
+  height      : 37px;
+  line-height : 40px;
+  padding-left: 32px;
+}
+
+.room_show_reserver {
+  padding: 0 8px 8px;
+}
+
+.room_show_reserver > p {
+  padding-bottom: 16px;
+  font-size     : 32px;
+  font-weight   : bold;
+  margin-bottom : 0;
+}
+
+.reserve_form {
+  border : 1px solid #eaedef;
+  padding: 4px 16px 32px;
+}
+
+.rent {
+  margin-bottom: 4px;
+}
+
+.rent + div {
+  font-size: 24px;
+}
+
+.label_p {
+  margin: 16px 0 4px;
+}
+
+.days_field {
+  width: 100%;
+}
+
+.room_submit_btn {
+  width        : 100%;
+  background   : #4a90e2;
+  color        : #fff;
+  border       : 1px solid #007bff;
+  cursor       : pointer;
+  border-radius: 0.25em;
+  margin-top   : 16px;
+  text-align   : center;
+}
+
+.room_reserve_container {
+  width       : 100%;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.room_img {
+  width: 700px;
+}
+
+// registration
+
+.room_list {
+  margin: 20px;
+}
+
+.room_list > h1 {
+  font-weight  : bold;
+  margin-left  : 16px;
+  margin-bottom: 24px;
+}
+
+.room_list_tr {
+  text-align   : center;
+  border-top   : 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
+
+.room_list_tr > th {
+  padding  : 8px 16px;
+  font-size: 20px;
+}
+
+.room_list_tr > td {
+  padding  : 8px 16px;
+  font-size: 20px;
+}

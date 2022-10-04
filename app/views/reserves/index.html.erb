@@ -1,0 +1,39 @@
+<section class="room_list">
+
+  <h1>予約済みルーム一覧 : <%= @reserves.count %>件</h1>
+
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  
+  <table>
+    <thead>
+      <tr class="room_list_tr">
+        <th>ルーム画像</th>
+        <th>ルーム名</th>
+        <th>ルーム紹介</th>
+        <th>人数</th>
+        <th>合計料金</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>予約確定日時</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @reserves.each do |reserve| %>
+        <tr class="room_list_tr">
+          <td><%= link_to image_tag(reserve.room.image.to_s, size: '240x160'), reserve %></td>
+          <td><%= link_to "#{reserve.room.name}", reserve %></td>
+          <td><%= reserve.room.introduction %></td>
+          <td><%= reserve.num_people %>人</td>
+          <td>¥<%= (reserve.room.rent * reserve.num_people * ((reserve.end_day - reserve.start_day + 1).to_i)).to_s(:delimited) %></td>
+          <td><%= reserve.start_day.to_s(:datetime_jp) %></td>
+          <td><%= reserve.end_day.to_s(:datetime_jp) %></td>
+          <td><%= reserve.created_at.to_s(:datetime_jp) %></td>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+</section>

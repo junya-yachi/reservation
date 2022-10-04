@@ -1,0 +1,107 @@
+body {
+  padding: 0;
+  margin : 0;
+}
+
+.header_container {
+  background     : #000;
+  height         : 70px;
+  line-height    : 42px;
+  justify-content: space-between;
+}
+
+.header_left {
+  float  : left;
+  display: flex;
+}
+
+.header_left input {
+  margin-top: 10px;
+  height: auto;
+}
+
+.header_left ul {
+  margin-bottom: 0;
+}
+
+.header_right {
+  float  : right;
+  display: flex;
+}
+
+.user_name {
+  color      : #fff;
+  font-weight: bold;
+  text-align : center;
+  padding    : 0 16px;
+  line-height: 70px;
+}
+
+.thumbnail {
+  line-height: 65px;
+}
+
+.thumbnail_img {
+  background   : #4a90e2;
+  width        : 48px;
+  height       : 48px;
+  border-radius: 50%;
+}
+
+.log_in_btn {
+  background   : #4a90e2;
+  color        : #fff;
+  padding      : 6px 12px;
+  margin       : 8px 16px;
+  border-radius: 8px;
+  float        : left;
+}
+
+.sign_up_btn {
+  background   : #6c757d;
+  color        : #fff;
+  padding      : 6px 12px;
+  margin       : 8px 16px;
+  border-radius: 8px;
+  float        : right;
+}
+
+.header_menu {
+  background: #fff;
+  text-align: left;
+  position  : absolute;
+  padding   : 12px;
+}
+
+.navbar-toggler {
+  line-height  : 70px;
+  margin       : 0;
+  padding      : 0;
+  border       : none;
+}
+
+.nav-bar-menu {
+  color : #fff;
+  margin: 0 40px;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 75vh;
+  position  : relative;
+}
+
+.footer {
+  position   : absolute;
+  bottom     : 0px;
+  height     : 180px;
+  width      : 100%;
+  margin-top : 64px;
+  padding-top: 90px;
+  background : #111;
+  color      : #fff;
+  text-align : center;
+}
