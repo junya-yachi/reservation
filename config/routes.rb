@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'rooms/registration'
   get 'mains/index'
   get 'rooms/index'
-  get 'rooms/registration'
   get 'reserves/index'
   
+  root :to => 'mains#index'
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 devise_for :users, controllers: {
   registrations: 'users/registrations',

@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
     @room = Room.new(params.require(:room).permit(:name, :introduction, :rent, :adress, :image, :users_id))
     if @room.save
       flash[:notice] = "ルームの新規登録が完了しました"
-      redirect_to :rooms #showアクションページに飛ぶ様にする
+      redirect_to :rooms
     else
       render "new"
     end

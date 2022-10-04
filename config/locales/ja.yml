@@ -19,3 +19,13 @@ ja:
         start_day: 開始日
         end_day: 終了日
         num_people: 人数
+
+  activerecord:
+    models:
+      room: 部屋
+    attributes:
+      room:
+        name: ルーム名
+        introduction: ルーム紹介
+        rent: 料金
+        adress: 住所

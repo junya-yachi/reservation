@@ -1,6 +1,11 @@
 <section class="room_list">
+
   <h1>予約済みルーム一覧 : <%= @rooms.count %>件</h1>
 
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  
   <table>
     <thead>
       <tr class="room_list_tr">
