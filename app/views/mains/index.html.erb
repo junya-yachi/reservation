@@ -1,6 +1,8 @@
-
-
 <section class="hero_container">
+  <% if flash[:notice] %>
+    <p class="notice main_notice" ><%= flash[:notice] %></p>
+  <% end %>
+
   <div class="hero_search">
     <h4>Potepan Shareでまだ体験したことのない旅をしよう</h4>
     <%= search_form_for @q do |f| %>

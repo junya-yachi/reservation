@@ -1,6 +1,7 @@
 class ReservesController < ApplicationController
   def index
-    @reserves = Reserve.all
+    @user = current_user
+    @reserves = Reserve.where(user_id: @user.id)
     @rooms = Room.all
   end
 

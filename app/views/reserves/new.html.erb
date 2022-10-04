@@ -18,7 +18,7 @@
             </td>
           </tr>
           <tr>
-            <td>□使用日数 : <%= (@reserve.end_day - @reserve.start_day).to_i %>日</td>
+            <td>□使用日数 : <%= (@reserve.end_day - @reserve.start_day + 1).to_i %>日</td>
           </tr>
           <tr>
             <td>
@@ -27,7 +27,7 @@
           </tr>
           <tr>
             <td>
-              □合計金額 : ¥<%= (@room.rent * @reserve.num_people).to_s(:delimited) %>
+              □合計金額 : ¥<%= (@room.rent * @reserve.num_people * ((@reserve.end_day - @reserve.start_day + 1).to_i)).to_s(:delimited) %>
             </td>
           </tr>
           <tr>
