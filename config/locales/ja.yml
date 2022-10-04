@@ -25,9 +25,9 @@ ja:
       reserve: 予約
     attributes:
       reserve:
-        start_day: 開始日
-        end_day: 終了日
-        num_people: 人数
+      start_day: 開始日
+      end_day: 終了日
+      num_people: 人数
 
   activerecord:
     models:

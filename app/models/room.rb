@@ -7,6 +7,7 @@ class Room < ApplicationRecord
   validates :introduction, presence: true
   validates :rent, presence: true
   validates :adress, presence: true
+  validate  :rent_check
 
   def self.ransackable_attributes(auth_object = nil)
     %w[adress introduction]
@@ -14,5 +15,11 @@ class Room < ApplicationRecord
 
   def self.ransackable_associations(auth_object = nil)
     %w[]
+  end
+
+  def rent_check
+    if rent < 0
+      errors.add(:rent, "は0より少ない数値で登録は出来ません")
+    end
   end
 end
