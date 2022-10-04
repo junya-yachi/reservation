@@ -13,6 +13,15 @@ ja:
 
   activerecord:
     models:
+      user: ユーザー
+    attributes:
+      user:
+        name: ユーザーネーム
+        image: アイコン
+        self_intro: 自己紹介
+
+  activerecord:
+    models:
       reserve: 予約
     attributes:
       reserve:

@@ -37,6 +37,12 @@
       </div>
 
       <div class="user_field">
+        <%= f.label :self_intro, "自己紹介" %> <i>(100文字以内で入力してください)</i><br />
+        <%= f.text_area :self_intro, autofocus: true, autocomplete: "self_intro" %>
+      </div>
+
+
+      <div class="user_field">
         <%= f.label :image, "アイコン" %><br />
         <% if current_user.image? %>
           <%= image_tag current_user.image.to_s, class: 'edit_img' %><br />

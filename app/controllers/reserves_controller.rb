@@ -8,7 +8,7 @@ class ReservesController < ApplicationController
     @reserve = Reserve.new(reserve_params)
     @room = Room.find_by(id: @reserve.room_id)
   end
- 
+
   def create
     @room = Room.find_by(params[:id])
     @reserve = Reserve.new(reserve_params)
